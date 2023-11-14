@@ -16,3 +16,5 @@ qm disk import 109 /root/vmname-data.vhdx local-zfs --format raw
 - ```/root/vmname-data.vhdx``` is the file path of your vhdx file
 - ```local-zfs``` is the name of the storage pool you want to put the disk image on
 - ```--format raw``` specifies the disk image file type you want. If using ZFS to store your disk image use ```raw```. If using EXT4 then use ```qcow2```
+
+You then just need to go into the VM's Hardware tab and attach the disk to the VM by double clicking it
