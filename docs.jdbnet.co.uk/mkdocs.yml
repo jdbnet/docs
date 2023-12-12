@@ -5,6 +5,8 @@ theme:
   name: material
   favicon: 'img/favicon.ico'
   logo: 'img/favicon.ico'
+  overrides:
+    - overrides
   palette:
 
     # Palette toggle for automatic mode
