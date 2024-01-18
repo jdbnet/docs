@@ -1,6 +1,6 @@
 site_name: Docs
 site_url: https://docs.jdbnet.co.uk
-copyright: Copyright &copy; 2023 JDB-NET
+copyright: Copyright &copy; 2024 JDB-NET
 theme:
   name: material
   favicon: 'img/favicon.ico'
