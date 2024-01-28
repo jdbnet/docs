@@ -6,8 +6,6 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '19 1 * * *'
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
@@ -76,9 +74,7 @@ jobs:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
           tags: |
-            # Existing tags from metadata action
             ${{ steps.meta.outputs.tags }}
-            # Add a tag with the build number
             ${{ env.IMAGE_NAME }}:${{ github.run_number }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
