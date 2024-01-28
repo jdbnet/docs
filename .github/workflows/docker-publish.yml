@@ -67,8 +67,12 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Set lowercase IMAGE_NAME
-        run: echo "IMAGE_NAME=$(echo ${{ env.IMAGE_NAME }} | tr '[:upper:]' '[:lower:]')" >> <span class="math-inline">GITHUB\_ENV
+      - id: string
+        uses: ASzc/change-string-case-action@v1
+        with:
+          string: ${{ env.IMAGE_NAME }}
+      - run: |
+          echo "${{ steps.string.outputs.lowercase }}"
 
       - name: Build and push Docker image
         id: build-and-push
