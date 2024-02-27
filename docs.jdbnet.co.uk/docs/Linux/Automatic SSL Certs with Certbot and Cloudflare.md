@@ -64,3 +64,18 @@ chmod 600 ~/.secrets/certbot/cloudflare.ini
 This will attempt to renew your certificates every day at midnight. Certbot will automatically renew only if the certificate is due for renewal.
 
 That's it! You've now set up Certbot to use the Cloudflare API for certificate renewal. Make sure to test the renewal process to ensure everything works smoothly.
+
+## Haproxy Automatic Renewal
+
+If you use Haproxy, you can setup a script to automatically renew your certs, put them into the correct format, then restart Haproxy automatically.
+
+```bash
+#!/bin/bash
+/usr/bin/certbot renew --quiet
+rm /etc/haproxy/cert.pem
+cat /etc/letsencrypt/live/example.com/fullchain.pem >> /etc/haproxy/cert.pem
+cat /etc/letsencrypt/live/example.com/privkey.pem >> /etc/haproxy/cert.pem
+systemctl restart haproxy
+```
+
+You can then put this script in a cron job to automatically renew your certificate and put it live
