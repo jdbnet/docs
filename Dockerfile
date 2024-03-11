@@ -1,6 +1,8 @@
-FROM python:latest as builder
+FROM python:alpine as builder
 COPY ./src/ /src/
 WORKDIR /src/
+RUN apk update
+RUN apk add git
 RUN pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-git-authors-plugin
 RUN mkdocs build
 
