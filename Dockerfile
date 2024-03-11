@@ -1,7 +1,7 @@
 FROM python:latest as builder
 COPY ./src/ /src/
 WORKDIR /src/
-RUN pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin
+RUN pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-git-authors-plugin
 RUN mkdocs build
 
 FROM nginx:stable-alpine
