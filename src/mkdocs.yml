@@ -1,10 +1,14 @@
 site_name: Docs
 site_url: https://docs.jdbnet.co.uk
-copyright: Copyright &copy; 2024 JDB-NET
+copyright: Copyright &copy; 2023-<script>document.write(new Date().getFullYear())</script> JDB-NET
+repo_url: https://github.com/jdbnet/docs
+repo_name: jdbnet/docs
 theme:
   name: material
   favicon: 'img/favicon.ico'
   logo: 'img/favicon.ico'
+  icon:
+    repo: fontawesome/brands/github
   palette:
 
     # Palette toggle for automatic mode
@@ -36,3 +40,9 @@ extra:
   analytics:
     provider: google
     property: G-HX23H5H3QF
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-authors
+  - privacy

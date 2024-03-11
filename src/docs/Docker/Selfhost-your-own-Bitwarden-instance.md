@@ -10,10 +10,6 @@ services:
   Bitwarden:
     container_name: "Bitwarden"
     environment:
-      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      - "LC_ALL=C.UTF-8"
-      - "DEBIAN_FRONTEND=noninteractive"
-      - "UDEV=off"
       - "ROCKET_PROFILE=release"
       - "ROCKET_ADDRESS=0.0.0.0"
       - "ROCKET_PORT=80"
