@@ -4,6 +4,7 @@ RUN apk add git
 RUN git config --system --add safe.directory /docs
 RUN git config --system --add safe.directory /site
 RUN pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-git-authors-plugin
+WORKDIR /docs
 RUN mkdocs build
 
 FROM nginx:stable-alpine
