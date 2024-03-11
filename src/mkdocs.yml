@@ -1,6 +1,6 @@
 site_name: Docs
 site_url: https://docs.jdbnet.co.uk
-copyright: Copyright &copy; 2024 JDB-NET
+copyright: Copyright &copy; $(date +%Y) JDB-NET
 theme:
   name: material
   favicon: 'img/favicon.ico'
@@ -35,4 +35,4 @@ theme:
 extra:
   analytics:
     provider: google
-    property: G-HX23H5H3QF
+    property: ${GA_TRACKING_CODE}
