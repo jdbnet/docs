@@ -5,8 +5,8 @@ repo_url: https://github.com/jdbnet/docs
 repo_name: jdbnet/docs
 theme:
   name: material
-  favicon: 'img/favicon.ico'
-  logo: 'img/favicon.ico'
+  favicon: 'img/favicon.png'
+  logo: 'img/favicon.png'
   icon:
     repo: fontawesome/brands/github
   palette:
