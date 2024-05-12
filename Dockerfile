@@ -3,7 +3,7 @@ COPY . /docs
 WORKDIR /docs
 
 RUN apt update
-RUN apt add git build-base
+RUN apt install git gcc
 RUN git config --system --add safe.directory /docs
 RUN git config --system --add safe.directory /site
 RUN pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-git-authors-plugin mkdocs-material[imaging]
