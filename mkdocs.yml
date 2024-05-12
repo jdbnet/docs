@@ -40,6 +40,13 @@ extra:
   analytics:
     provider: google
     property: G-HX23H5H3QF
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jdbnet
+    - icon: fontawesome/brands/mastodon
+      link: https://social.jdbnet.co.uk/@jdbnet
+    - icon: fontawesome/brands/discord
+      link: https://discordapp.com/users/261595054173323271
 
 plugins:
   - search
@@ -48,3 +55,4 @@ plugins:
       type: timeago
   - git-authors
   - privacy
+  - social

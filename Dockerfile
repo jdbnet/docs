@@ -3,7 +3,7 @@ COPY . /docs
 WORKDIR /docs
 
 RUN apt update
-RUN apt install git gcc
+RUN apt install git gcc libcairo2 libcairo2-dev
 RUN git config --system --add safe.directory /docs
 RUN git config --system --add safe.directory /site
 RUN pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-git-authors-plugin mkdocs-material[imaging]
